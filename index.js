@@ -5,8 +5,8 @@ average=document.getElementById("avg")
 // let response=fetch("https://api.weatherapi.com/v1/current.json?key=72e2a622adce48738e1153710210712&q=america&aqi=yes")
 
 
-async function fetchAsync(){
-    const response = await fetch("https://api.weatherapi.com/v1/current.json?key=72e2a622adce48738e1153710210712&q=dehradun&aqi=yes")
+async function fetchAsync(location){
+    const response = await fetch("https://api.weatherapi.com/v1/current.json?key=72e2a622adce48738e1153710210712&q="+location+"&aqi=yes")
     const data = await response.json()
     tem.innerText = data.current.temp_c
     cit.innerText= data.location.name
@@ -14,13 +14,10 @@ async function fetchAsync(){
     
 }
 
-let temp = fetchAsync()
-let myForm = document.getElementById('form')
-var formData = new FormData(myForm);
+fetchAsync("dehradun")
 
-for (var p of formData) {
-    let name = p[0];
-    let value = p[1];
 
-    console.log(name, value)
-}
+function send_data(){
+    let x = document.getElementById('location').elements[0].value
+    fetchAsync(x)
+    console.log(x)}

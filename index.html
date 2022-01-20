@@ -14,28 +14,28 @@
   <nav>
     <h1>Weather App</h1>
   </nav>
-<div class="row">
-  <div class="temp_location">
   <div class="row">
-    <p id="temp" class="temp">23 </p>
-    <p class="temp"> °C</p>
+    <div class="temp_location">
+      <div class="row">
+        <p id="temp" class="temp">23</p>
+        <p class="temp">°C</p>
+      </div>
+      <p id="city" class="city">chandigarh</p>
+      <p id="avg" class="avg"> today's weather is going to be sunny </p>
+    </div>
+
+    <div class="image">
+      <img src="/assets/26-cloud-png-image.png" style="width: 60vmin;" alt="">
+    </div>
   </div>
-  <p id="city" class="city">chandigarh</p>
-  <p id="avg" class="avg"> today's weather is going to be sunny </p></div>
 
-  <div class="image">
-    <img src="/assets/26-cloud-png-image.png" style="width: 60vmin;" alt="">
-</div></div>
+  <form id='location'>
+    <input type="text" name="q" value="a">
+  </form>
 
+  <button onclick="send_data()">SUBMIT</button>
 
-<br><br><br>
-  <form>
-    <input type="text" id="form">
-    <br>
-
-    <button>SUBMIT</button>
-  </form> 
-
+  
   <script src="index.js"></script>
 </body>
 
