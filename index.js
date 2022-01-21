@@ -18,6 +18,6 @@ fetchAsync("dehradun")
 
 
 function send_data(){
-    let x = document.getElementById('location').elements[0].value
+    let x = document.getElementById('location').value
     fetchAsync(x)
     console.log(x)}
