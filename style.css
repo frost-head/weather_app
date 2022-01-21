@@ -12,6 +12,8 @@
 body{
     background-color: #064789;
     color: #EBF2FA;
+    padding: 5px;
+    margin: 15px;
 }
 
 nav{
@@ -20,7 +22,27 @@ nav{
     justify-content: center;
 }
 
-.temp{
-    font-size: 36px;
+nav h1{
+    font-size: 5vmin;
 }
 
+.temp{
+    font-size: 10vmin;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    justify-items: flex-start;
+}
+
+.avg{
+    font-size: 3.2vmin;
+}
+
+.city{
+    font-size: 4vmin;  
+    font-weight: 800;  
+}
